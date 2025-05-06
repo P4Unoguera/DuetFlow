@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PianoKey : MonoBehaviour
 {
-    public Color pressedColor = Color.gray;
+    private Color pressedColor1 = Color.blue;
+    private Color pressedColor2 = Color.red;
     public float pressDepth = 0.05f;
     public float fadeOutDuration = 0.5f;
 
@@ -14,6 +15,8 @@ public class PianoKey : MonoBehaviour
     //private bool isPressed = false;
     private AudioSource audioSource;
     private Coroutine fadeCoroutine;
+
+    public string keyIndex;
 
     void Start()
     {
@@ -25,9 +28,18 @@ public class PianoKey : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player1"))
+        if (other.CompareTag("Player1") && transform.parent.tag == "Piano1")
         {
-            PressKey();
+            PressKey1();
+            if (audioSource != null && !audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+
+        if (other.CompareTag("Player2") && transform.parent.tag == "Piano2")
+        {
+            PressKey2();
             if (audioSource != null && !audioSource.isPlaying)
             {
                 audioSource.Play();
@@ -53,13 +65,29 @@ public class PianoKey : MonoBehaviour
                 fadeCoroutine = StartCoroutine(FadeOut(audioSource, fadeOutDuration));
             }
         }
+
+        if (other.CompareTag("Player2"))
+        {
+            ReleaseKey();
+            if (audioSource != null && audioSource.isPlaying)
+            {
+                fadeCoroutine = StartCoroutine(FadeOut(audioSource, fadeOutDuration));
+            }
+        }
     }
 
-    void PressKey()
+    void PressKey1()
     {
         //isPressed = true;
         transform.localPosition = originalPosition - new Vector3(0, pressDepth, 0);
-        rend.material.color = pressedColor;
+        rend.material.color = pressedColor1;
+    }
+
+    void PressKey2()
+    {
+        //isPressed = true;
+        transform.localPosition = originalPosition - new Vector3(0, pressDepth, 0);
+        rend.material.color = pressedColor2;
     }
 
     void ReleaseKey()

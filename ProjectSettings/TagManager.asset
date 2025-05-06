@@ -8,6 +8,8 @@ TagManager:
   - BlendPlane1
   - Player1
   - Player2
+  - Piano1
+  - Piano2
   layers:
   - Default
   - TransparentFX
