@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
         if(player1Ready && player2Ready && !experienceStarted)
         {
             experienceStarted = true;
-            Debug.Log("Start Experience :)");       // Escena nova, animació, etc,
+            Debug.Log("Start Experience :)");       // Escena nova, animació, començar musica, etc. (lo que volguem)
         }
     }
 }

@@ -27,6 +27,7 @@ public class NoteSpawner : MonoBehaviour
         public string keyIndex;      // Which key (and thus spawner) to use
         public float spawnTime;   // When to spawn the note (seconds)
         public float duration;    // How long the note lasts (optional)
+        public string targetPiano;  // Which note spawner has to work
     }
 
     public List<NoteData> songData = new List<NoteData>(); // Fill this from JSON or manually
@@ -66,20 +67,40 @@ public class NoteSpawner : MonoBehaviour
         Transform spawnTransform = spawnPointMap[noteData.keyIndex];
         GameObject newNote;
 
-        if (noteData.keyIndex == "Cs1" || noteData.keyIndex == "Ds1" || noteData.keyIndex == "Fs1" || noteData.keyIndex == "Gs1" || noteData.keyIndex == "As1" ||
-            noteData.keyIndex == "Cs2" || noteData.keyIndex == "Ds2" || noteData.keyIndex == "Fs2" || noteData.keyIndex == "Gs2" || noteData.keyIndex == "As2")
+        Quaternion rotation = Quaternion.identity;
+        if (noteData.targetPiano == "Piano2")
         {
-            newNote = Instantiate(BlackNotePrefab, spawnTransform.position, Quaternion.identity);
+            rotation = Quaternion.Euler(0, 90, 0);
+        }
+
+        if (noteData.keyIndex == "Cs1" || noteData.keyIndex == "Ds1" || noteData.keyIndex == "Fs1" || noteData.keyIndex == "Gs1" || noteData.keyIndex == "As1" ||
+            noteData.keyIndex == "Cs2" || noteData.keyIndex == "Ds2" || noteData.keyIndex == "Fs2" || noteData.keyIndex == "Gs2" || noteData.keyIndex == "As2")     // if black key
+        {
+            newNote = Instantiate(BlackNotePrefab, spawnTransform.position, rotation);
         }
 
         else
         {
-            newNote = Instantiate(WhiteNotePrefab, spawnTransform.position, Quaternion.identity);
+            newNote = Instantiate(WhiteNotePrefab, spawnTransform.position, rotation);
         }
 
         // Pass duration info to the note
         var noteScript = newNote.GetComponent<FallingNote>();
         noteScript.fallSpeed = fallSpeed;
+
+
+        if (noteData.targetPiano == "Piano1")
+        {
+            newNote.GetComponent<Renderer>().material.color = Color.blue;
+            noteScript.dir = new Vector3(0, 0, -1);  // falling
+        }
+        else if (noteData.targetPiano == "Piano2")
+        {
+
+            newNote.GetComponent<Renderer>().material.color = Color.red;
+            noteScript.dir = new Vector3(-1, 0, 0);  // left
+        }
+
         noteScript.Initialize(noteData.duration);  // Set scale based on duration
     }
 

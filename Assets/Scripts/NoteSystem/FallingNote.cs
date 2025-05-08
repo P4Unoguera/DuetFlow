@@ -5,6 +5,8 @@ using UnityEngine;
 public class FallingNote : MonoBehaviour
 {
     public float fallSpeed = 0.0f; // Set externally by the spawner
+    public Vector3 dir = Vector3.zero;
+
     private float duration;
 
     // Called by the spawner to initialize the note
@@ -20,8 +22,7 @@ public class FallingNote : MonoBehaviour
 
     void Update()
     {
-        // Move the note downward each frame
-        Vector3 dir = new Vector3(0, 0, -1);
+        // Move the note each frame
         transform.position +=  dir * fallSpeed * Time.deltaTime;
 
     }
