@@ -29,11 +29,14 @@ public class FallingNote : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Transform parent = other.transform.parent;
-
-        if (parent.CompareTag("Piano1") || parent.CompareTag("Piano2"))
+        if (other.transform.parent)
         {
-            Destroy(gameObject);
+            Transform parent = other.transform.parent;
+
+            if (parent.CompareTag("Piano1") || parent.CompareTag("Piano2"))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
