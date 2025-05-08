@@ -7,6 +7,8 @@ public class NoteSpawner : MonoBehaviour
     public GameObject WhiteNotePrefab;
     public GameObject BlackNotePrefab;
 
+    public float offset;
+
 
     [System.Serializable]
     public class KeySpawnMapping
@@ -73,15 +75,14 @@ public class NoteSpawner : MonoBehaviour
             rotation = Quaternion.Euler(0, 90, 0);
         }
 
-        if (noteData.keyIndex == "Cs1" || noteData.keyIndex == "Ds1" || noteData.keyIndex == "Fs1" || noteData.keyIndex == "Gs1" || noteData.keyIndex == "As1" ||
-            noteData.keyIndex == "Cs2" || noteData.keyIndex == "Ds2" || noteData.keyIndex == "Fs2" || noteData.keyIndex == "Gs2" || noteData.keyIndex == "As2")     // if black key
+        if (noteData.keyIndex == "Cs1" || noteData.keyIndex == "Ds1" || noteData.keyIndex == "Fs1" || noteData.keyIndex == "Gs1" || noteData.keyIndex == "As1")
         {
-            newNote = Instantiate(BlackNotePrefab, spawnTransform.position, rotation);
+            newNote = Instantiate(BlackNotePrefab, spawnTransform.position + new Vector3(offset, 0, 0), rotation);
         }
 
         else
         {
-            newNote = Instantiate(WhiteNotePrefab, spawnTransform.position, rotation);
+            newNote = Instantiate(WhiteNotePrefab, spawnTransform.position + new Vector3(offset, 0, 0), rotation);
         }
 
         // Pass duration info to the note
