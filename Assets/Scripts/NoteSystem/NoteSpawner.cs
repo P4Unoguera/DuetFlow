@@ -9,6 +9,11 @@ public class NoteSpawner : MonoBehaviour
 
     public float offset;
 
+    public Vector3 dirPiano1 = new Vector3(-1, 0, 0);   // left
+    public Vector3 dirPiano2 = new Vector3(1, 0, 0);    // right
+
+    public Vector3 rotPiano1Euler = Vector3.zero;
+    public Vector3 rotPiano2Euler = new Vector3(0, 90, 0);
 
     [System.Serializable]
     public class KeySpawnMapping
@@ -69,10 +74,18 @@ public class NoteSpawner : MonoBehaviour
         Transform spawnTransform = spawnPointMap[noteData.keyIndex];
         GameObject newNote;
 
-        Quaternion rotation = Quaternion.identity;
-        if (noteData.targetPiano == "Piano2")
+        Quaternion rotation;
+        Vector3 direction;
+
+        if (noteData.targetPiano == "Piano1")
         {
-            rotation = Quaternion.Euler(0, 90, 0);
+            rotation = Quaternion.Euler(rotPiano1Euler);
+            direction = dirPiano1;
+        }
+        else
+        {
+            rotation = Quaternion.Euler(rotPiano2Euler);
+            direction = dirPiano2;
         }
 
         if (noteData.keyIndex == "Cs1" || noteData.keyIndex == "Ds1" || noteData.keyIndex == "Fs1" || noteData.keyIndex == "Gs1" || noteData.keyIndex == "As1")
@@ -93,13 +106,12 @@ public class NoteSpawner : MonoBehaviour
         if (noteData.targetPiano == "Piano1")
         {
             newNote.GetComponent<Renderer>().material.color = Color.blue;
-            noteScript.dir = new Vector3(0, 0, -1);  // falling
+            noteScript.dir = dirPiano1;
         }
         else if (noteData.targetPiano == "Piano2")
         {
-
             newNote.GetComponent<Renderer>().material.color = Color.red;
-            noteScript.dir = new Vector3(-1, 0, 0);  // left
+            noteScript.dir = dirPiano2;
         }
 
         noteScript.Initialize(noteData.duration);  // Set scale based on duration

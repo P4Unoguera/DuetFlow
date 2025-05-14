@@ -815,6 +815,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WhiteNotePrefab: {fileID: 7447265647433599024, guid: 78bd86abaeca6dd4b9fb201bba124d92, type: 3}
   BlackNotePrefab: {fileID: 3567206941556450746, guid: 799cf3637dd81884494f9a312b051234, type: 3}
+  offset: 0
+  dirPiano1: {x: 0, y: 0, z: -1}
+  dirPiano2: {x: -1, y: 0, z: 0}
+  rotPiano1Euler: {x: 0, y: 0, z: 0}
+  rotPiano2Euler: {x: 0, y: 90, z: 0}
   keyMappings:
   - keyName: C1
     spawnPoint: {fileID: 1095060928}
@@ -1732,6 +1737,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WhiteNotePrefab: {fileID: 7447265647433599024, guid: 78bd86abaeca6dd4b9fb201bba124d92, type: 3}
   BlackNotePrefab: {fileID: 3567206941556450746, guid: 799cf3637dd81884494f9a312b051234, type: 3}
+  offset: 0
+  dirPiano1: {x: 0, y: 0, z: -1}
+  dirPiano2: {x: -1, y: 0, z: 0}
+  rotPiano1Euler: {x: 0, y: 0, z: 0}
+  rotPiano2Euler: {x: 0, y: 90, z: 0}
   keyMappings:
   - keyName: C1
     spawnPoint: {fileID: 1793627061}
