@@ -10,6 +10,9 @@ TagManager:
   - Player2
   - Piano1
   - Piano2
+  - Competition Mode
+  - Quit Game
+  - Menu
   layers:
   - Default
   - TransparentFX

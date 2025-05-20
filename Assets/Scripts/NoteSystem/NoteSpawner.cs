@@ -58,6 +58,8 @@ public class NoteSpawner : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.Instance.startGame) return;    // Surt de la funció si encara no es pot començar la partida
+
         songTimer += Time.deltaTime;
 
         // Spawn notes when it's time
