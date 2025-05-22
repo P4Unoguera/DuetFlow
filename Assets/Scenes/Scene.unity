@@ -4478,6 +4478,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850ce49ac700f5e4c896cd20306e0462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platform1: {fileID: 0}
+  platform2: {fileID: 0}
+  startGame: 0
   player1Ready: 0
   player2Ready: 0
 --- !u!1 &590469842
@@ -4899,7 +4902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calibrationUI: {fileID: 220600117}
   trackingInterface: {fileID: 220600112}
-  enableTracking: 0
+  enableTracking: 1
   numberOfPlayers: 2
   numberOfBaseStations: 4
   enableRotation: 1
@@ -4914,7 +4917,7 @@ MonoBehaviour:
   - {fileID: 1554760525}
   - {fileID: 483883237}
   - {fileID: 1151668547}
-  calibrationSaveFilePath: 
+  calibrationSaveFilePath: C:\Calibration\Eje Z
   playerSelected: 1
   trackingDisabledPlayerSpeed: 5
 --- !u!1 &619241794
