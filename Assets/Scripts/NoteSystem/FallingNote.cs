@@ -4,39 +4,41 @@ using UnityEngine;
 
 public class FallingNote : MonoBehaviour
 {
-    public float fallSpeed = 0.0f; // Set externally by the spawner
+    public float fallSpeed = 0.0f; // Set by spawner
     public Vector3 dir = Vector3.zero;
 
     private float duration;
 
-    // Called by the spawner to initialize the note
+    // Called by the spawner
     public void Initialize(float durationInSeconds)
     {
         duration = durationInSeconds;
 
-        // OPTIONAL: Scale the note's length (along Z, or change to Y if needed)
+        // Scale based on duration
         Vector3 scale = transform.localScale;
-        scale.z = duration * 10;  // Adjust axis as needed
+        scale.z = duration * 10;  // Adjust axis if needed
         transform.localScale = scale;
     }
 
     void Update()
     {
-        // Move the note each frame
-        transform.position +=  dir * fallSpeed * Time.deltaTime;
-
+        // Move note
+        transform.position += dir * fallSpeed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.transform.parent)
+        if (other.transform.parent &&
+            (other.transform.parent.CompareTag("Piano1") || other.transform.parent.CompareTag("Piano2")))
         {
-            Transform parent = other.transform.parent;
-
-            if (parent.CompareTag("Piano1") || parent.CompareTag("Piano2"))
-            {
-                Destroy(gameObject);
-            }
+            float despawnDelay = (duration * 10f) / fallSpeed;
+            StartCoroutine(DespawnAfterDelay(despawnDelay));
         }
+    }
+
+    private IEnumerator DespawnAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
     }
 }
