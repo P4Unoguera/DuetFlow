@@ -10,7 +10,7 @@ public class PianoKey : MonoBehaviour
     private Color pressedColor2 = Color.red;
 
     // Amount the key visually depresses when pressed
-    public float pressDepth = 0.01f;
+    public float pressDepth = 0.0f;
     // Duration for audio fade-out effect when the key is released
     public float fadeOutDuration = 0.5f;
 

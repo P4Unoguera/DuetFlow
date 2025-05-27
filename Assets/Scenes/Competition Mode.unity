@@ -4016,6 +4016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WhiteNotePrefab: {fileID: 7447265647433599024, guid: 78bd86abaeca6dd4b9fb201bba124d92, type: 3}
   BlackNotePrefab: {fileID: 3567206941556450746, guid: 799cf3637dd81884494f9a312b051234, type: 3}
+  songFileName: NinthSymphony
   offset: 0
   dirPiano1: {x: 1, y: 0, z: 0}
   dirPiano2: {x: -1, y: 0, z: 0}
@@ -6589,7 +6590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1327101332}
   m_Layer: 0
-  m_Name: piano2
+  m_Name: Piano2
   m_TagString: Piano2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10224,6 +10225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WhiteNotePrefab: {fileID: 7447265647433599024, guid: 78bd86abaeca6dd4b9fb201bba124d92, type: 3}
   BlackNotePrefab: {fileID: 3567206941556450746, guid: 799cf3637dd81884494f9a312b051234, type: 3}
+  songFileName: NinthSymphony
   offset: 0
   dirPiano1: {x: 1, y: 0, z: 0}
   dirPiano2: {x: -1, y: 0, z: 0}
@@ -12747,7 +12749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652177076113}
   m_Layer: 0
-  m_Name: piano1
+  m_Name: Piano1
   m_TagString: Piano1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

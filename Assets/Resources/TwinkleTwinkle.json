@@ -1,0 +1,16 @@
+[
+  { "keyIndex": "C1", "spawnTime": 0.0, "duration": 0.9},
+  { "keyIndex": "C1", "spawnTime": 1.0, "duration": 0.9},
+  { "keyIndex": "G1", "spawnTime": 2.0, "duration": 0.9},
+  { "keyIndex": "G1", "spawnTime": 3.0, "duration": 0.9},
+  { "keyIndex": "A1", "spawnTime": 4.0, "duration": 0.9},
+  { "keyIndex": "A1", "spawnTime": 5.0, "duration": 0.9},
+  { "keyIndex": "G1", "spawnTime": 6.5, "duration": 1.9},
+  { "keyIndex": "F1", "spawnTime": 8.0, "duration": 0.9},
+  { "keyIndex": "F1", "spawnTime": 9.0, "duration": 0.9},
+  { "keyIndex": "E1", "spawnTime": 10.0, "duration": 0.9},
+  { "keyIndex": "E1", "spawnTime": 11.0, "duration": 0.9},
+  { "keyIndex": "D1", "spawnTime": 12.0, "duration": 0.9},
+  { "keyIndex": "D1", "spawnTime": 13.0, "duration": 0.9},
+  { "keyIndex": "C1", "spawnTime": 14.5, "duration": 1.9}
+]
