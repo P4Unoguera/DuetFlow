@@ -3,7 +3,12 @@ guid: 850ce49ac700f5e4c896cd20306e0462
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - platform1: {instanceID: 0}
+  - platform2: {instanceID: 0}
+  - countdownTextPlatform1: {instanceID: 0}
+  - countdownTextPlatform2: {instanceID: 0}
+  - startSound: {fileID: 8300000, guid: d3dcc008d2421f44e88f5315f8bc4d69, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

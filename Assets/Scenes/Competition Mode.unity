@@ -3000,6 +3000,7 @@ MonoBehaviour:
   platform2: {fileID: 1677341324}
   countdownTextPlatform1: {fileID: 1498437451}
   countdownTextPlatform2: {fileID: 1843825998}
+  startSound: {fileID: 0}
   startGame: 0
   player1Ready: 0
   player2Ready: 0
@@ -3214,7 +3215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calibrationUI: {fileID: 220600117}
   trackingInterface: {fileID: 220600112}
-  enableTracking: 1
+  enableTracking: 0
   numberOfPlayers: 2
   numberOfBaseStations: 4
   enableRotation: 0
