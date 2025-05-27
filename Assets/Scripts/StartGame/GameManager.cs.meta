@@ -9,6 +9,7 @@ MonoImporter:
   - countdownTextPlatform1: {instanceID: 0}
   - countdownTextPlatform2: {instanceID: 0}
   - startSound: {fileID: 8300000, guid: d3dcc008d2421f44e88f5315f8bc4d69, type: 3}
+  - counterSound: {fileID: 8300000, guid: 0406ff2b23c5dee4783909d11f1741dd, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

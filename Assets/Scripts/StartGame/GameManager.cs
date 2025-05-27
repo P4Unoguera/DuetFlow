@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     // Sound to play when the game starts
     public AudioClip startSound;
+    public AudioClip counterSound;
     // Audio source for playing sounds
     private AudioSource audioSource;
 
@@ -53,6 +54,9 @@ public class GameManager : MonoBehaviour
         {
             countdownActive = true; // Start the countdown
             countdownTimer = 3f; // Reset timer to 3 seconds
+            audioSource.clip = counterSound;
+            audioSource.Play();
+            //audioSource.PlayOneShot(counterSound);
             // Show countdown UI on both platforms
             countdownTextPlatform1.gameObject.SetActive(true);
             countdownTextPlatform2.gameObject.SetActive(true);
@@ -63,6 +67,7 @@ public class GameManager : MonoBehaviour
         {
             countdownActive = false; // Cancel countdown
             countdownTimer = 3f; // Reset timer to 3 seconds
+            audioSource.Stop();
             // Reset countdown UI on both platforms
             countdownTextPlatform1.text = "";
             countdownTextPlatform2.text = "";
