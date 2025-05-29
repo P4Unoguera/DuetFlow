@@ -51,6 +51,8 @@ public class PianoKey : MonoBehaviour
                 audioSource.volume = 1;
                 audioSource.Play(); // Play sound
             }
+
+            gameObject.tag = "Active1";
         }
         // If touched by Player2 and key belongs to Piano2...
         if (other.CompareTag("Player2") && transform.parent.tag == "Piano2")
@@ -61,6 +63,8 @@ public class PianoKey : MonoBehaviour
                 audioSource.volume = 1;
                 audioSource.Play(); // Play sound
             }
+
+            gameObject.tag = "Active2";
         }
     }
 
@@ -75,6 +79,8 @@ public class PianoKey : MonoBehaviour
             {
                 fadeCoroutine = StartCoroutine(FadeOut(audioSource, fadeOutDuration));
             }
+
+            gameObject.tag = "NotActive1";
         }
 
         if (other.CompareTag("Player2"))
@@ -84,6 +90,8 @@ public class PianoKey : MonoBehaviour
             {
                 fadeCoroutine = StartCoroutine(FadeOut(audioSource, fadeOutDuration));
             }
+
+            gameObject.tag = "NotActive2";
         }
     }
 

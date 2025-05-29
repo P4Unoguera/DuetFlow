@@ -12,6 +12,9 @@ public class FallingNote : MonoBehaviour
     // Duration of the note
     private float duration;
 
+    private bool scoring1 = false;
+    private bool scoring2 = false;
+
     // Initialization of the note
     public void Initialize(float durationInSeconds)
     {
@@ -28,6 +31,16 @@ public class FallingNote : MonoBehaviour
     {
         // Move the note in the specified direction, scaled by speed and frame time
         transform.position += dir * fallSpeed * Time.deltaTime;
+
+        if (scoring1)
+        {
+            ScoreManager.Instance.AddScore1(1);
+        }
+
+        if (scoring2)
+        {
+            ScoreManager.Instance.AddScore2(1);
+        }
     }
 
     // OnTriggerEnter is automatically called when another collider enters this trigger
@@ -39,6 +52,17 @@ public class FallingNote : MonoBehaviour
         {
             // Calculate the delay after which the note should be destroyed
             float despawnDelay = (duration * 10f) / fallSpeed;
+
+            if (other.CompareTag("Active1"))
+            {
+                scoring1 = true;
+            }
+
+            if (other.CompareTag("Active2"))
+            {
+                scoring2 = true;
+            }
+
             // Start coroutine to destroy the note after the calculated delay
             StartCoroutine(DespawnAfterDelay(despawnDelay));
         }

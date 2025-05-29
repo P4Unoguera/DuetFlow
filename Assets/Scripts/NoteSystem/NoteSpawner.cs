@@ -26,6 +26,8 @@ public class NoteSpawner : MonoBehaviour
     // Rotation for notes on Piano2ç
     public Vector3 rotPiano2Euler = new Vector3(0, 90, 0);
 
+    private bool white = false;
+
     // Key-to-SpawnPoint Mapping Setup
     [System.Serializable]
     public class KeySpawnMapping
@@ -189,6 +191,7 @@ public class NoteSpawner : MonoBehaviour
         else
         {
             newNote = Instantiate(WhiteNotePrefab, spawnTransform.position + new Vector3(offset, 0, 0), rotation);
+            white = true;
         }
 
         // Get the note's script to pass in speed and direction
@@ -205,6 +208,11 @@ public class NoteSpawner : MonoBehaviour
         {
             newNote.GetComponent<Renderer>().material.color = Color.red;
             noteScript.dir = dirPiano2;
+            
+            if (white)
+            {
+                newNote.GetComponent<BoxCollider>().center = new Vector3(0, -3, -1.25f);
+            }
         }
 
         noteScript.Initialize(noteData.duration);  // Set scale based on duration

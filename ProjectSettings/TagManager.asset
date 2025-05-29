@@ -13,6 +13,10 @@ TagManager:
   - Competition Mode
   - Quit Game
   - Menu
+  - Active1
+  - Active2
+  - NotActive1
+  - NotActive2
   layers:
   - Default
   - TransparentFX
