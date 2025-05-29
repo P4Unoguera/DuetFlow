@@ -104,7 +104,7 @@ public class NoteSpawner : MonoBehaviour
         songTimer += Time.deltaTime;
 
         // Start music if not already playing
-        if (!audioSource.isPlaying && audioSource.clip != null)
+        if (!audioSource.isPlaying && audioSource.clip != null && songTimer < audioSource.clip.length)
         {
             audioSource.Play();
         }
@@ -135,6 +135,21 @@ public class NoteSpawner : MonoBehaviour
             SpawnNote(noteForPiano2);
 
             currentNoteIndex++;
+        }
+
+        // Stop game once song finishes
+        if (audioSource.isPlaying && songTimer >= audioSource.clip.length)
+        {
+            GameManager.Instance.startGame = false;
+            GameManager.Instance.experienceStarted = false;
+
+            GameManager.Instance.platform1.SetActive(true);
+            GameManager.Instance.platform2.SetActive(true);
+
+            songTimer = 0f;
+            currentNoteIndex = 0;
+
+            audioSource.Stop();
         }
     }
     void LoadSongData()

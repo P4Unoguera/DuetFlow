@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool player2Ready = false;
 
     // Internal state flags
-    private bool experienceStarted = false; // Indicates if the experience has already started
+    [HideInInspector] public bool experienceStarted = false; // Indicates if the experience has already started
     private float countdownTimer = 3f;      // Countdown starting at 3 seconds
     private bool countdownActive = false;   // Controls if countdown is currently running
 
