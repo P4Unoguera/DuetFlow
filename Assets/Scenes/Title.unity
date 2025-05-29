@@ -624,8 +624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &95326441
 BoxCollider:
@@ -1216,6 +1214,8 @@ MonoBehaviour:
   platform2: {fileID: 1790568875}
   countdownTextPlatform1: {fileID: 0}
   countdownTextPlatform2: {fileID: 0}
+  startSound: {fileID: 0}
+  counterSound: {fileID: 0}
   startGame: 1
   player1Ready: 0
   player2Ready: 0
@@ -1642,7 +1642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230643163}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2206, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.2206, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1172133039}
@@ -1756,8 +1756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &230643167
 BoxCollider:
@@ -1964,8 +1962,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &258319453
 BoxCollider:
@@ -2466,7 +2462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414825100}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.255, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.255, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1172133039}
@@ -2580,8 +2576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &414825104
 BoxCollider:
@@ -3397,7 +3391,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529014723}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2337, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.2337, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1172133039}
@@ -3511,8 +3505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &529014727
 BoxCollider:
@@ -3877,8 +3869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &555439517
 BoxCollider:
@@ -4453,8 +4443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &628180967
 BoxCollider:
@@ -4607,7 +4595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716198467}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2077, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.2077, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1172133039}
@@ -4721,8 +4709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &716198471
 BoxCollider:
@@ -4929,8 +4915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &721003165
 BoxCollider:
@@ -5053,7 +5037,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740376852}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.1725, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.1725, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1172133039}
@@ -5167,8 +5151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &740376856
 BoxCollider:
@@ -5425,7 +5407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815478402}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.3031, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.3031, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1172133039}
@@ -5539,8 +5521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &815478406
 BoxCollider:
@@ -6354,8 +6334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &904911950
 BoxCollider:
@@ -6562,8 +6540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &907102184
 BoxCollider:
@@ -6731,7 +6707,7 @@ Transform:
   m_GameObject: {fileID: 976650301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 30}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 445848001}
   m_Father: {fileID: 164963988}
@@ -6956,8 +6932,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: C1
 --- !u!65 &993190716
 BoxCollider:
@@ -7685,8 +7659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1045524738
 BoxCollider:
@@ -8430,7 +8402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172133038}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -109.9, y: -4.5, z: -29.1}
+  m_LocalPosition: {x: -109.9, y: -5.05, z: -29.1}
   m_LocalScale: {x: 450, y: 300, z: 300}
   m_Children:
   - {fileID: 993190713}
@@ -8992,8 +8964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1247866773
 BoxCollider:
@@ -9086,7 +9056,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261552209}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2902, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.2902, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1172133039}
@@ -9200,8 +9170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1261552213
 BoxCollider:
@@ -9658,7 +9626,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307206873}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.1852, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.1852, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1172133039}
@@ -9772,8 +9740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1307206877
 BoxCollider:
@@ -10362,7 +10328,7 @@ Transform:
   m_GameObject: {fileID: 1459515983}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 34.5, y: 0, z: 4.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 51574452}
   m_Father: {fileID: 164963988}
@@ -11196,8 +11162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1652647652
 BoxCollider:
@@ -11567,7 +11531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667080259}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.3162, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.3162, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1172133039}
@@ -11681,8 +11645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1667080263
 BoxCollider:
@@ -12049,6 +12011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WhiteNotePrefab: {fileID: 7447265647433599024, guid: 78bd86abaeca6dd4b9fb201bba124d92, type: 3}
   BlackNotePrefab: {fileID: 3567206941556450746, guid: 799cf3637dd81884494f9a312b051234, type: 3}
+  songName: NinthSymphony
   offset: 0
   dirPiano1: {x: 0, y: 0, z: -1}
   dirPiano2: {x: -1, y: 0, z: 0}
@@ -12491,8 +12454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1729195519
 BoxCollider:
@@ -12699,8 +12660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1732275479
 BoxCollider:
@@ -13306,8 +13265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1813986179
 BoxCollider:
@@ -14512,7 +14469,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938226805}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2677, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.2677, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1172133039}
@@ -14626,8 +14583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
-  fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1938226809
 BoxCollider:

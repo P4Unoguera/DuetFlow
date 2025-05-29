@@ -2385,7 +2385,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &472811672
@@ -2961,6 +2960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 574576350}
   - component: {fileID: 574576351}
+  - component: {fileID: 574576352}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -3000,9 +3000,107 @@ MonoBehaviour:
   platform2: {fileID: 1677341324}
   countdownTextPlatform1: {fileID: 1498437451}
   countdownTextPlatform2: {fileID: 1843825998}
+  startSound: {fileID: 8300000, guid: d3dcc008d2421f44e88f5315f8bc4d69, type: 3}
+  counterSound: {fileID: 8300000, guid: 0406ff2b23c5dee4783909d11f1741dd, type: 3}
   startGame: 0
   player1Ready: 0
   player2Ready: 0
+--- !u!82 &574576352
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574576349}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &599754906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3785,7 +3883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &715690559
@@ -4015,6 +4112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WhiteNotePrefab: {fileID: 7447265647433599024, guid: 78bd86abaeca6dd4b9fb201bba124d92, type: 3}
   BlackNotePrefab: {fileID: 3567206941556450746, guid: 799cf3637dd81884494f9a312b051234, type: 3}
+  songName: NinthSymphony
   offset: 0
   dirPiano1: {x: 1, y: 0, z: 0}
   dirPiano2: {x: -1, y: 0, z: 0}
@@ -4247,7 +4345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776108404}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2206, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.2206, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327101332}
@@ -4361,7 +4459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &776108408
@@ -4764,7 +4861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &905642708
@@ -5170,7 +5266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &964504398
@@ -5562,7 +5657,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062321694}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.1725, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.1725, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327101332}
@@ -5676,7 +5771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1062321698
@@ -5800,7 +5894,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087428089}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2077, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.2077, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327101332}
@@ -5914,7 +6008,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1087428093
@@ -6588,7 +6681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1327101332}
   m_Layer: 0
-  m_Name: piano2
+  m_Name: Piano2
   m_TagString: Piano2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6602,7 +6695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327101331}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -28, y: -4.8, z: 85}
+  m_LocalPosition: {x: -28, y: -5.05, z: 85}
   m_LocalScale: {x: 540, y: 300, z: 250}
   m_Children:
   - {fileID: 1363344716}
@@ -6763,7 +6856,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1363344719
@@ -6971,7 +7063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1417607794
@@ -7261,7 +7352,7 @@ Transform:
   m_GameObject: {fileID: 1440896347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 40.9, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 512108156}
   m_Father: {fileID: 1563017567}
@@ -7582,7 +7673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466422837}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2337, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.2337, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327101332}
@@ -7696,7 +7787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1466422841
@@ -7790,7 +7880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469847442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43, y: -0.5, z: 24.1}
+  m_LocalPosition: {x: 43, y: -0.2, z: 24.1}
   m_LocalScale: {x: 10, y: 0.3, z: 20}
   m_Children: []
   m_Father: {fileID: 574576350}
@@ -7977,7 +8067,7 @@ Transform:
   m_GameObject: {fileID: 1471923275}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -44.5, y: 0, z: -12.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 148363423}
   m_Father: {fileID: 1563017567}
@@ -8300,7 +8390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: -157}
+  m_AnchoredPosition: {x: 120, y: -298}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498437451
@@ -9323,7 +9413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677341324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.7, y: -0.5, z: -26.3}
+  m_LocalPosition: {x: -42.7, y: -0.2, z: -26.3}
   m_LocalScale: {x: 10, y: 0.3, z: 20}
   m_Children: []
   m_Father: {fileID: 574576350}
@@ -9630,7 +9720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729207201}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.1852, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.1852, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327101332}
@@ -9744,7 +9834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1729207205
@@ -10127,7 +10216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1782695487
@@ -10223,6 +10311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WhiteNotePrefab: {fileID: 7447265647433599024, guid: 78bd86abaeca6dd4b9fb201bba124d92, type: 3}
   BlackNotePrefab: {fileID: 3567206941556450746, guid: 799cf3637dd81884494f9a312b051234, type: 3}
+  songName: NinthSymphony
   offset: 0
   dirPiano1: {x: 1, y: 0, z: 0}
   dirPiano2: {x: -1, y: 0, z: 0}
@@ -10484,7 +10573,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73, y: -168}
+  m_AnchoredPosition: {x: -11, y: -168}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1843825998
@@ -12373,7 +12462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3515881346373431349}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2337, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.2337, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450652177076113}
@@ -12412,7 +12501,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &496588810214550369
@@ -12532,7 +12620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148437898539}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 28, y: -4.8, z: -85}
+  m_LocalPosition: {x: 28, y: -5.05, z: -85}
   m_LocalScale: {x: 540, y: 300, z: 250}
   m_Children:
   - {fileID: 6601875588852491740}
@@ -12624,7 +12712,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &815122812072957732
@@ -12746,7 +12833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652177076113}
   m_Layer: 0
-  m_Name: piano1
+  m_Name: Piano1
   m_TagString: Piano1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12768,7 +12855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496588810214550367}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.1725, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.1725, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450652177076113}
@@ -12807,7 +12894,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &1864093077632254458
@@ -13099,7 +13185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &2930120419067264297
@@ -13244,7 +13329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &3515881346373431351
@@ -13410,7 +13494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: C1
 --- !u!82 &3770301311751093656
@@ -13583,7 +13666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &3822306269167767709
@@ -13758,7 +13840,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &4997457150279196408
@@ -13919,7 +14000,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4997457150279196406}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.1852, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.1852, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450652177076113}
@@ -14100,7 +14181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864093077632254456}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2206, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.2206, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450652177076113}
@@ -14156,7 +14237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3822306269167767707}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.2077, y: 0.0109, z: -0.0298}
+  m_LocalPosition: {x: -0.2077, y: 0.0103, z: -0.0298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450652177076113}
@@ -14209,7 +14290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &7963189302566163822
@@ -14354,7 +14434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &8085957689114019152
@@ -14589,7 +14668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &8382769771898583199
@@ -14783,7 +14861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916157a02dd099646942fae999654f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDepth: 0.002
   fadeOutDuration: 0.5
   keyIndex: 
 --- !u!65 &9049195292444118975
