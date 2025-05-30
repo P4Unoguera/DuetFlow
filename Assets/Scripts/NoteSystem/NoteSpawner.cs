@@ -13,7 +13,7 @@ public class NoteSpawner : MonoBehaviour
     public GameObject BlackNotePrefab;
 
     // Song file name to load from Resources
-    [SerializeField] private string songName = "NinthSymphony";
+    private string songName;
 
     // Offset to adjust spawn position
     public float offset;
@@ -94,6 +94,7 @@ public class NoteSpawner : MonoBehaviour
             }
         }
         // Load JSON file
+        songName = SongSelectionData.selectedSongName;
         LoadSongData();
     }
 
@@ -152,6 +153,8 @@ public class NoteSpawner : MonoBehaviour
     }
     void LoadSongData()
     {
+        // Default songName for testing the Competition Mode scene
+        songName = string.IsNullOrEmpty(SongSelectionData.selectedSongName) ? "NinthSymphony" : SongSelectionData.selectedSongName;
         // Load JSON
         TextAsset jsonFile = Resources.Load<TextAsset>(songName); // Name of music sheet
         if (jsonFile != null)

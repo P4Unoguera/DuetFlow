@@ -51,7 +51,7 @@ public class FallingNote : MonoBehaviour
             (other.transform.parent.CompareTag("Piano1") || other.transform.parent.CompareTag("Piano2")))
         {
             // Calculate the delay after which the note should be destroyed
-            float despawnDelay = (duration * 10f) / fallSpeed;
+            float despawnDelay = (duration * 16f) / fallSpeed;
 
             if (other.CompareTag("Active1"))
             {

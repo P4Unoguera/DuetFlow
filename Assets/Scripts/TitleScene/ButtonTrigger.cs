@@ -45,7 +45,7 @@ public class ButtonTrigger : MonoBehaviour
                 // Load the appropriate scene based on the object's tag
                 if (CompareTag("Competition Mode"))
                 {
-                    SceneManager.LoadScene("Competition Mode");
+                    SceneManager.LoadScene("Selection");
                 }
                 else if (CompareTag("Menu"))
                 {
@@ -55,6 +55,21 @@ public class ButtonTrigger : MonoBehaviour
                 {
                     Application.Quit();
                     Debug.Log("Game Quit");
+                }
+                else if (CompareTag("Level1"))
+                {
+                    SongSelectionData.selectedSongName = "TwinkleTwinkle";
+                    SceneManager.LoadScene("Competition Mode");
+                }
+                else if (CompareTag("Level2"))
+                {
+                    SongSelectionData.selectedSongName = "NinthSymphony";
+                    SceneManager.LoadScene("Competition Mode");
+                }
+                else if (CompareTag("Level3"))
+                {
+                    SongSelectionData.selectedSongName = "PachelbelsCanon";
+                    SceneManager.LoadScene("Competition Mode");
                 }
                 // Reset trigger flag to prevent repeat activation
                 isTriggered = false;

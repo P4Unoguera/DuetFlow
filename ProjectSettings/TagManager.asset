@@ -17,6 +17,9 @@ TagManager:
   - Active2
   - NotActive1
   - NotActive2
+  - Level1
+  - Level2
+  - Level3
   layers:
   - Default
   - TransparentFX

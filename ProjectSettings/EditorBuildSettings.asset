@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Competition Mode.unity
     guid: 3dcd9a4feb29fb444bbef3d5e0794fb9
+  - enabled: 1
+    path: Assets/Scenes/Selection.unity
+    guid: 731bd1ce2f8098340bc521a4e2daf598
   m_configObjects: {}

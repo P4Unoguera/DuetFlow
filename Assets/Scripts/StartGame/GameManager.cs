@@ -21,10 +21,13 @@ public class GameManager : MonoBehaviour
     public AudioClip startSound;
     public AudioClip counterSound;
     // Audio source for playing sounds
-    private AudioSource audioSource;
+    private AudioSource[] audioSources;
 
     // Flag indicating whether the game has started
     public bool startGame = false;
+
+    // Selected song name (Ninth Symphony by default)
+    [HideInInspector] public string selectedSongName = "NinthSymphony";
 
     // Flags to track if each player is ready (hidden in the inspector)
     [HideInInspector] public bool player1Ready = false;
@@ -41,9 +44,9 @@ public class GameManager : MonoBehaviour
         // Set the static instance reference
         Instance = this;
 
-        // Get the AudioSource component and play the start sound once
-        audioSource = GetComponent<AudioSource>();
-        audioSource.PlayOneShot(startSound);
+        // Get the AudioSources components and play the start sound once
+        audioSources = GetComponents<AudioSource>();
+        audioSources[0].PlayOneShot(startSound);
     }
 
     // Update is called once per frame
@@ -54,8 +57,8 @@ public class GameManager : MonoBehaviour
         {
             countdownActive = true; // Start the countdown
             countdownTimer = 3f; // Reset timer to 3 seconds
-            audioSource.clip = counterSound;
-            audioSource.Play();
+            audioSources[1].clip = counterSound;
+            audioSources[1].Play();
             //audioSource.PlayOneShot(counterSound);
             // Show countdown UI on both platforms
             countdownTextPlatform1.gameObject.SetActive(true);
@@ -67,7 +70,7 @@ public class GameManager : MonoBehaviour
         {
             countdownActive = false; // Cancel countdown
             countdownTimer = 3f; // Reset timer to 3 seconds
-            audioSource.Stop();
+            audioSources[1].Stop();
             // Reset countdown UI on both platforms
             countdownTextPlatform1.text = "";
             countdownTextPlatform2.text = "";
