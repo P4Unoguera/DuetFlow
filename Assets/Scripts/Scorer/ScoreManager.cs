@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
     private Vector3 score1StartPos;
     private Vector3 score2StartPos;
 
-    public float distancePerPoint = 0.25f;
+    public float distancePerPoint = 0.5f;
 
     private void Awake()
     {

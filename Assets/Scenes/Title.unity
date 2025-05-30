@@ -442,7 +442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &73161598
 Transform:
   m_ObjectHideFlags: 0
@@ -1197,7 +1197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &166804648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,6 +1219,7 @@ MonoBehaviour:
   startGame: 1
   player1Ready: 0
   player2Ready: 0
+  experienceStarted: 0
 --- !u!4 &166804649
 Transform:
   m_ObjectHideFlags: 0
@@ -12071,7 +12072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1685593681
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 // NoteSpawner class handles spawning falling notes
 public class NoteSpawner : MonoBehaviour
@@ -115,24 +117,29 @@ public class NoteSpawner : MonoBehaviour
             NoteData note = songData[currentNoteIndex];
 
             // Spawn for Piano1
-            NoteData noteForPiano1 = new NoteData()
-            {
-                keyIndex = note.keyIndex,
-                spawnTime = note.spawnTime,
-                duration = note.duration,
-                targetPiano = "Piano1"
-            };
-            SpawnNote(noteForPiano1);
+            if (gameObject.tag == "Piano1"){
+                NoteData noteForPiano1 = new NoteData()
+                {
+                    keyIndex = note.keyIndex,
+                    spawnTime = note.spawnTime,
+                    duration = note.duration,
+                    targetPiano = "Piano1"
+                };
+                SpawnNote(noteForPiano1);
+            }
 
             // Spawn for Piano2
-            NoteData noteForPiano2 = new NoteData()
+            if (gameObject.tag == "Piano2")
             {
-                keyIndex = note.keyIndex,
-                spawnTime = note.spawnTime,
-                duration = note.duration,
-                targetPiano = "Piano2"
-            };
-            SpawnNote(noteForPiano2);
+                NoteData noteForPiano2 = new NoteData()
+                {
+                    keyIndex = note.keyIndex,
+                    spawnTime = note.spawnTime,
+                    duration = note.duration,
+                    targetPiano = "Piano2"
+                };
+                SpawnNote(noteForPiano2);
+            }
 
             currentNoteIndex++;
         }
@@ -140,16 +147,7 @@ public class NoteSpawner : MonoBehaviour
         // Stop game once song finishes
         if (audioSource.isPlaying && songTimer >= audioSource.clip.length)
         {
-            GameManager.Instance.startGame = false;
-            GameManager.Instance.experienceStarted = false;
-
-            GameManager.Instance.platform1.SetActive(true);
-            GameManager.Instance.platform2.SetActive(true);
-
-            songTimer = 0f;
-            currentNoteIndex = 0;
-
-            audioSource.Stop();
+            SceneManager.LoadScene("Title");
         }
     }
     void LoadSongData()
