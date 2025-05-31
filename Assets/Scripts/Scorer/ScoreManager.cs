@@ -10,26 +10,26 @@ public class ScoreManager : MonoBehaviour
     public int score1 = 0;
     public int score2 = 0;
 
-    public RectTransform player1Scorer;
-    public RectTransform player2Scorer;
+    public GameObject player1Scorer;
+    public GameObject player2Scorer;
 
-    private Vector3 score1StartPos;
-    private Vector3 score2StartPos;
-
-    public float distancePerPoint = 0.5f;
+    private float distancePerPoint = 0.00002f;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            score1StartPos = player1Scorer.anchoredPosition;
-            score2StartPos = player2Scorer.anchoredPosition;
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+        
     }
 
     public void AddScore1(int points)
@@ -46,9 +46,17 @@ public class ScoreManager : MonoBehaviour
     }
 
 
-    private void UpdateScorer(RectTransform scorer, int score)
+    private void UpdateScorer(GameObject scorer, int score)
     {
-        player1Scorer.anchoredPosition = score1StartPos + new Vector3(score1 * distancePerPoint, 0, 0);
-        player2Scorer.anchoredPosition = score2StartPos - new Vector3(score2 * distancePerPoint, 0, 0);
+        if (scorer.CompareTag("Player1"))
+        {
+            scorer.transform.position = scorer.transform.position - new Vector3(score1 * distancePerPoint, 0, 0);
+        }
+
+        else
+        {
+            scorer.transform.position = scorer.transform.position + new Vector3(score1 * distancePerPoint, 0, 0);
+        }
+
     }
 }
