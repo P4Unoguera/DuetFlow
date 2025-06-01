@@ -302,7 +302,6 @@ GameObject:
   - component: {fileID: 38839790}
   - component: {fileID: 38839789}
   - component: {fileID: 38839788}
-  - component: {fileID: 38839787}
   m_Layer: 0
   m_Name: Text - Level 3
   m_TagString: Competition Mode
@@ -325,19 +324,6 @@ Transform:
   m_Father: {fileID: 221760858}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &38839787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38839785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e25f14e1b2c0e1478a7f6228b39f33c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonTime: 4
 --- !u!65 &38839788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7115,7 +7101,6 @@ GameObject:
   - component: {fileID: 960375476}
   - component: {fileID: 960375475}
   - component: {fileID: 960375474}
-  - component: {fileID: 960375473}
   m_Layer: 0
   m_Name: Text - Level 1
   m_TagString: Competition Mode
@@ -7138,19 +7123,6 @@ Transform:
   m_Father: {fileID: 221760858}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &960375473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960375471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e25f14e1b2c0e1478a7f6228b39f33c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonTime: 4
 --- !u!65 &960375474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12567,7 +12539,6 @@ GameObject:
   - component: {fileID: 1691717055}
   - component: {fileID: 1691717054}
   - component: {fileID: 1691717053}
-  - component: {fileID: 1691717052}
   m_Layer: 0
   m_Name: Text - Level 2
   m_TagString: Competition Mode
@@ -12590,19 +12561,6 @@ Transform:
   m_Father: {fileID: 221760858}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1691717052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691717050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e25f14e1b2c0e1478a7f6228b39f33c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonTime: 4
 --- !u!65 &1691717053
 BoxCollider:
   m_ObjectHideFlags: 0
