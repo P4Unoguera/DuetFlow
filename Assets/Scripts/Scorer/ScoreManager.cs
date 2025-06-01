@@ -27,11 +27,6 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        
-    }
-
     public void AddScore1(int points)
     {
         score1 += points;
@@ -53,9 +48,9 @@ public class ScoreManager : MonoBehaviour
             scorer.transform.position = scorer.transform.position - new Vector3(score1 * distancePerPoint, 0, 0);
         }
 
-        else
+        if (scorer.CompareTag("Player2"))
         {
-            scorer.transform.position = scorer.transform.position + new Vector3(score1 * distancePerPoint, 0, 0);
+            scorer.transform.position = scorer.transform.position + new Vector3(score2 * distancePerPoint, 0, 0);
         }
 
     }
