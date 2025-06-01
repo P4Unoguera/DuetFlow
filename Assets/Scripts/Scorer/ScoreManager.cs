@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using static UnityEditor.PlayerSettings;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
 
-    public int score1 = 0;
-    public int score2 = 0;
+    public float score1 = 0;
+    public float score2 = 0;
 
     public GameObject player1Scorer;
     public GameObject player2Scorer;
 
-    private float distancePerPoint = 0.00002f;
+    private float distancePerPoint = 0.0003f;
 
     private void Awake()
     {
@@ -29,28 +30,31 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore1(int points)
     {
+        Debug.Log("Score1: " + score1);
+
         score1 += points;
         UpdateScorer(player1Scorer, score1);
     }
 
     public void AddScore2(int points)
     {
-        score2 += points;
+        Debug.Log("Score2: " + score2);
 
+        score2 += points;
         UpdateScorer(player2Scorer, score2);
     }
 
 
-    private void UpdateScorer(GameObject scorer, int score)
+    private void UpdateScorer(GameObject scorer, float score)
     {
-        if (scorer.CompareTag("Player1"))
+        if (scorer.CompareTag("Player1") && scorer.transform.localPosition.x > -0.49f && scorer.transform.localPosition.x < 0.46f)
         {
-            scorer.transform.position = scorer.transform.position - new Vector3(score1 * distancePerPoint, 0, 0);
+            scorer.transform.localPosition = scorer.transform.localPosition - new Vector3(distancePerPoint, 0, 0);
         }
 
-        if (scorer.CompareTag("Player2"))
+        if (scorer.CompareTag("Player2") && scorer.transform.localPosition.x > -0.46f && scorer.transform.localPosition.x < 0.49f)
         {
-            scorer.transform.position = scorer.transform.position + new Vector3(score2 * distancePerPoint, 0, 0);
+            scorer.transform.localPosition = scorer.transform.localPosition + new Vector3(distancePerPoint, 0, 0);
         }
 
     }

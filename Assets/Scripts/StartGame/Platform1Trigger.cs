@@ -26,6 +26,7 @@ public class Platform1Trigger : MonoBehaviour
             // Change the platform's color to blue to indicate readiness
             render.material.color = Color.blue;
         }
+
     }
 
     // OnTriggerExit is called when another collider exits this trigger

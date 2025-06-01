@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 // ButtonTrigger class to manage a trigger-based button
 public class ButtonTrigger : MonoBehaviour
@@ -21,6 +22,11 @@ public class ButtonTrigger : MonoBehaviour
     // Timer to track how long the button has been held
     private float timer = 0f;
 
+    // Audio source for playing sounds
+    private AudioSource audioSource;
+    // Sound to play when the game starts
+    public AudioClip buttonSound;
+
     // Start method is called once when the script is initialized
     void Start()
     {
@@ -28,6 +34,13 @@ public class ButtonTrigger : MonoBehaviour
         originalPosition = transform.localPosition;
         // Get the Renderer component attached to this GameObject
         render = GetComponent<Renderer>();
+        // Get audiosource or add component
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        // Assign the buttonSound
+        audioSource.clip = buttonSound;
     }
 
     // Update is called once per frame
@@ -90,6 +103,8 @@ public class ButtonTrigger : MonoBehaviour
             // Mark the button as triggered and reset the timer
             isTriggered = true;
             timer = 0f;
+            // Play the click sound
+            audioSource.Play();
         }
     }
 
@@ -106,6 +121,8 @@ public class ButtonTrigger : MonoBehaviour
             // Reset the button state and timer
             isTriggered = false;
             timer = 0f;
+            // Stop the click sound
+            audioSource.Stop();
         }
     }
 }

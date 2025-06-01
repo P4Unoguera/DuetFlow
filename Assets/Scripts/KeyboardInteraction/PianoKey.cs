@@ -46,7 +46,7 @@ public class PianoKey : MonoBehaviour
         if (other.CompareTag("Player1") && transform.parent.tag == "Piano1")
         {
             PressKey1(); // Move key down and change color to blue
-            if (audioSource != null)// && !audioSource.isPlaying)
+            if (audioSource != null)
             {
                 audioSource.volume = 1;
                 audioSource.Play(); // Play sound
@@ -58,7 +58,7 @@ public class PianoKey : MonoBehaviour
         if (other.CompareTag("Player2") && transform.parent.tag == "Piano2")
         {
             PressKey2(); // Move key down and change color to red
-            if (audioSource != null)// && !audioSource.isPlaying)
+            if (audioSource != null)
             {
                 audioSource.volume = 1;
                 audioSource.Play(); // Play sound
