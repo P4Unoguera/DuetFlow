@@ -47,7 +47,7 @@ public class PianoKey : MonoBehaviour
         string currentScene = SceneManager.GetActiveScene().name;
 
         // Both players can play the same piano in the title scene
-        if(currentScene == "Title")
+        if(currentScene == "Title" || currentScene == "Selection")
         {
             if (other.CompareTag("Player1"))
             {

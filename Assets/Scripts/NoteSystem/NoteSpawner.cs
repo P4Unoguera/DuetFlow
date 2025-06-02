@@ -81,6 +81,11 @@ public class NoteSpawner : MonoBehaviour
     public TextMeshProUGUI winText1;
     public TextMeshProUGUI winText2;
 
+    public GameObject plane;
+    public Material spaceMaterial1;
+    public Material spaceMaterial2;
+    public Material spaceMaterial3;
+
 
     // Start method is called once when the script is initialized
     void Start()
@@ -101,6 +106,22 @@ public class NoteSpawner : MonoBehaviour
         }
         // Load JSON file
         songName = SongSelectionData.selectedSongName;
+        Material[] PlaneMaterials = plane.GetComponent<MeshRenderer>().materials;
+        if (songName == "NinthSymphony")
+        {
+            PlaneMaterials[0] = spaceMaterial1;
+        }
+        if (songName == "PachelbelsCanon")
+        {
+            PlaneMaterials[0] = spaceMaterial2;
+        }
+        if (songName == "TwinkleTwinkle")
+        {
+            PlaneMaterials[0] = spaceMaterial3;
+        }
+
+        plane.GetComponent<MeshRenderer>().materials = PlaneMaterials;
+
         LoadSongData();
     }
 
