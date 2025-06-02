@@ -27,3 +27,11 @@ In this project, we mostly used our own sounds, along with FL Studio libraries a
 - Button Click / Selection.wav by aphom000 -- https://freesound.org/s/623175/ -- License: Creative Commons 0
 
 - Applause 50 seconds into interval by iainmccurdy -- https://freesound.org/s/681095/ -- License: Attribution 4.0
+
+We also have used some external assets downloaded from the internet:
+
+- Piano 3D Model by shakiller -- https://sketchfab.com/3d-models/piano-aafcb75617a44ccf9e6aedc3cb0b638b
+
+- Star 3D Model by BenjaTheMaker -- https://assetstore.unity.com/packages/3d/props/simple-gems-and-items-ultimate-animated-customizable-pack-73764
+
+- Dynamic Space Background by DinV Studio -- https://assetstore.unity.com/packages/2d/textures-materials/dynamic-space-background-lite-104606
