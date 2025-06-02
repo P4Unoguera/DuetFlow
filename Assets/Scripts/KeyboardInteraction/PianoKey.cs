@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 // PianoKey method that reacts to player collisions
 public class PianoKey : MonoBehaviour
@@ -42,29 +44,59 @@ public class PianoKey : MonoBehaviour
     // OnTriggerEnter is automatically called when another collider enters this trigger
     void OnTriggerEnter(Collider other)
     {
-        // If touched by Player1 and key belongs to Piano1...
-        if (other.CompareTag("Player1") && transform.parent.tag == "Piano1")
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        // Both players can play the same piano in the title scene
+        if(currentScene == "Title")
         {
-            PressKey1(); // Move key down and change color to blue
-            if (audioSource != null)
+            if (other.CompareTag("Player1"))
             {
-                audioSource.volume = 1;
-                audioSource.Play(); // Play sound
+                PressKey1();
+                if (audioSource != null)
+                {
+                    audioSource.volume = 1;
+                    audioSource.Play();
+                }
             }
 
-            gameObject.tag = "Active1";
+            if (other.CompareTag("Player2"))
+            {
+                PressKey2();
+                if (audioSource != null)
+                {
+                    audioSource.volume = 1;
+                    audioSource.Play();
+                }
+            }
         }
-        // If touched by Player2 and key belongs to Piano2...
-        if (other.CompareTag("Player2") && transform.parent.tag == "Piano2")
-        {
-            PressKey2(); // Move key down and change color to red
-            if (audioSource != null)
-            {
-                audioSource.volume = 1;
-                audioSource.Play(); // Play sound
-            }
 
-            gameObject.tag = "Active2";
+        // If not in title scene
+        else
+        {
+            // If touched by Player1 and key belongs to Piano1...
+            if (other.CompareTag("Player1") && transform.parent.tag == "Piano1")
+            {
+                PressKey1(); // Move key down and change color to blue
+                if (audioSource != null)
+                {
+                    audioSource.volume = 1;
+                    audioSource.Play(); // Play sound
+                }
+
+                gameObject.tag = "Active1";
+            }
+            // If touched by Player2 and key belongs to Piano2...
+            if (other.CompareTag("Player2") && transform.parent.tag == "Piano2")
+            {
+                PressKey2(); // Move key down and change color to red
+                if (audioSource != null)
+                {
+                    audioSource.volume = 1;
+                    audioSource.Play(); // Play sound
+                }
+
+                gameObject.tag = "Active2";
+            }
         }
     }
 

@@ -165,11 +165,11 @@ public class NoteSpawner : MonoBehaviour
 
                 if (score1 > score2)
                 {
-                    winText1.text = "You win!";
+                    winText1.text = $"You win!\nYour Score: {(int)score1}";
                 }
                 else if (score2 > score1)
                 {
-                    winText1.text = "You lose!";
+                    winText1.text = $"You lose!\nYour Score: {(int)score1}";
                 }
             }
 
@@ -179,11 +179,11 @@ public class NoteSpawner : MonoBehaviour
 
                 if (score1 > score2)
                 {
-                    winText2.text = "You lose!";
+                    winText2.text = $"You lose!\nYour Score: {(int)score2}";
                 }
                 else if (score2 > score1)
                 {
-                    winText2.text = "You win!";
+                    winText2.text = $"You win!\nYour Score: {(int)score2}";
                 }
             }
 
