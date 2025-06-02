@@ -47,6 +47,7 @@ public class ScoreManager : MonoBehaviour
 
     private void UpdateScorer(GameObject scorer, float score)
     {
+        // Move scorer when points are rewarded
         if (scorer.CompareTag("Player1") && scorer.transform.localPosition.x > -0.49f && scorer.transform.localPosition.x < 0.46f)
         {
             scorer.transform.localPosition = scorer.transform.localPosition - new Vector3(distancePerPoint, 0, 0);
@@ -56,6 +57,5 @@ public class ScoreManager : MonoBehaviour
         {
             scorer.transform.localPosition = scorer.transform.localPosition + new Vector3(distancePerPoint, 0, 0);
         }
-
     }
 }

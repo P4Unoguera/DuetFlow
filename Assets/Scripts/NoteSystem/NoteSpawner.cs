@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 // NoteSpawner class handles spawning falling notes
@@ -76,6 +77,11 @@ public class NoteSpawner : MonoBehaviour
     // Keeps track of which note should be spawned next
     private int currentNoteIndex = 0;
 
+    // Text for the "You win!" pop up
+    public TextMeshProUGUI winText1;
+    public TextMeshProUGUI winText2;
+
+
     // Start method is called once when the script is initialized
     void Start()
     {
@@ -146,9 +152,44 @@ public class NoteSpawner : MonoBehaviour
         }
 
         // Stop game once song finishes
-        if (audioSource.isPlaying && songTimer >= audioSource.clip.length)
+        if (audioSource.isPlaying && songTimer >= audioSource.clip.length - 5f)
         {
-            SceneManager.LoadScene("Title");
+            // Get score from the score manager
+            float score1 = ScoreManager.Instance.score1;
+            float score2 = ScoreManager.Instance.score2;
+
+            // Compare score between players
+            if (gameObject.CompareTag("Piano1"))
+            {
+                winText1.gameObject.SetActive(true);
+
+                if (score1 > score2)
+                {
+                    winText1.text = "You win!";
+                }
+                else if (score2 > score1)
+                {
+                    winText1.text = "You lose!";
+                }
+            }
+
+            if (gameObject.CompareTag("Piano2"))
+            {
+                winText2.gameObject.SetActive(true);
+
+                if (score1 > score2)
+                {
+                    winText2.text = "You lose!";
+                }
+                else if (score2 > score1)
+                {
+                    winText2.text = "You win!";
+                }
+            }
+
+
+            // Coroutine for delay and exit 
+            StartCoroutine(EndGameAfterDelay(7f));
         }
     }
     void LoadSongData()
@@ -234,4 +275,11 @@ public class NoteSpawner : MonoBehaviour
         noteScript.Initialize(noteData.duration);  // Set scale based on duration
     }
 
+    private IEnumerator EndGameAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay); 
+        winText1.gameObject.SetActive(false);
+        winText2.gameObject.SetActive(false);
+        SceneManager.LoadScene("Title");
+    }
 }
