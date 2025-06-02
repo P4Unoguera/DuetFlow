@@ -58,5 +58,5 @@
   { "keyIndex": "E1", "spawnTime": 59.0, "duration": 0.9},
   { "keyIndex": "D1", "spawnTime": 60.2, "duration": 1.4},
   { "keyIndex": "C1", "spawnTime": 61.4, "duration": 0.8},
-  { "keyIndex": "C1", "spawnTime": 63.1, "duration": 2}
+  { "keyIndex": "C1", "spawnTime": 63.5, "duration": 1.5}
 ]

@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject player1Scorer;
     public GameObject player2Scorer;
 
-    private float distancePerPoint = 0.0003f;
+    private float distancePerPoint = 0.0002f;
 
     private void Awake()
     {
