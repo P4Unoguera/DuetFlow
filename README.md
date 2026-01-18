@@ -1,6 +1,8 @@
 # Duet Flow - Full-Body Interactive Experience
 
 ## Introduction
+Duet Flow is a full-body interactive virtual reality experience developed as part of the Interactive Systems course in the Audiovisual Systems Engineering Degree. The project was created by Xavier Riera, Jordi Rubio, and Pau Noguera. The course has a strong practical orientation and focuses on the design and implementation of real-time full-body interactive experiences using the Mixed Reality system of the Full-Body Interaction Laboratory (FuBIntLab), part of the Cognitive Media Technologies research group in the UPF. The experience was developed using Unity3D, a professional tool widely used in Virtual, Augmented, and Mixed Reality applications.
+
 Duet Flow is a virtual reality game for two players, where each participant competes by playing a 12-key piano with their foot. The winner is the one who best follows the rhythm and hits the most correct notes.
 
 ## Game Mechanics:
