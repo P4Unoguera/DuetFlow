@@ -42,3 +42,6 @@ We also have used some external assets downloaded from the internet:
 - Star 3D Model by BenjaTheMaker -- https://assetstore.unity.com/packages/3d/props/simple-gems-and-items-ultimate-animated-customizable-pack-73764
 
 - Dynamic Space Background by DinV Studio -- https://assetstore.unity.com/packages/2d/textures-materials/dynamic-space-background-lite-104606
+
+
+![Duet Flow logo](logoDuetFlow.png)
